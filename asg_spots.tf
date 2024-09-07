@@ -1,4 +1,4 @@
-resource "aws_autoscaling_group" "on_demand" {
+resource "aws_autoscaling_group" "spots" {
   name_prefix = format("%s-on-demand", var.project_name)
 
   vpc_zone_identifier = [
@@ -13,8 +13,8 @@ resource "aws_autoscaling_group" "on_demand" {
   max_size         = var.cluster_on_demand_max_size
 
   launch_template {
-    id      = aws_launch_template.on_demand.id
-    version = aws_launch_template.on_demand.latest_version
+    id      = aws_launch_template.spots.id
+    version = aws_launch_template.spots.latest_version
   }
 
   tag {
@@ -31,11 +31,11 @@ resource "aws_autoscaling_group" "on_demand" {
   }
 }
 
-resource "aws_ecs_capacity_provider" "on_demand" {
+resource "aws_ecs_capacity_provider" "spots" {
   name = format("%s-on-demand", var.project_name)
 
   auto_scaling_group_provider {
-    auto_scaling_group_arn = aws_autoscaling_group.on_demand.arn
+    auto_scaling_group_arn = aws_autoscaling_group.spots.arn
     managed_scaling {
       maximum_scaling_step_size = 10
       minimum_scaling_step_size = 1

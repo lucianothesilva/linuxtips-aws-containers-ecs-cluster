@@ -1,5 +1,5 @@
-resource "aws_launch_template" "on_demand" {
-  name_prefix = format("%s-on-demand", var.project_name)
+resource "aws_launch_template" "spots" {
+  name_prefix = format("%s-spots", var.project_name)
   image_id    = var.nodes_ami
 
   instance_type = var.node_instance_type
@@ -8,9 +8,17 @@ resource "aws_launch_template" "on_demand" {
     aws_security_group.main.id
   ]
 
+  instance_market_options {
+    market_type = "spot"
+    spot_options {
+      max_price = "0.15"
+    }
+  }
+
   iam_instance_profile {
     name = aws_iam_instance_profile.main.name
   }
+
   update_default_version = true
 
   block_device_mappings {
