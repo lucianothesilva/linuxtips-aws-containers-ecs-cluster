@@ -1,6 +1,13 @@
+Aula do day 2 do curso de arquitetura de containers na AWS. Criação de um cluster ECS.
+
+
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| Terraform| [v1.9.5](https://releases.hashicorp.com/terraform/1.9.5/)|
+| AWS CLI| v2.17.6|
+
 
 ## Providers
 
