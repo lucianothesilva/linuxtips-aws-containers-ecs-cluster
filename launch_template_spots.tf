@@ -1,3 +1,4 @@
+# Cria um template instâncias Spot, que especifica as configurações das instâncias ao serem lançadas.
 resource "aws_launch_template" "spots" {
   name_prefix = format("%s-spots", var.project_name)
   image_id    = var.nodes_ami

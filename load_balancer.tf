@@ -1,3 +1,4 @@
+# Security group especifico para o load balancer
 resource "aws_security_group" "lb" {
   name   = format("%s-load-balancer", var.project_name)
   vpc_id = data.aws_ssm_parameter.vpc.value
@@ -22,9 +23,10 @@ resource "aws_security_group_rule" "ingress_80" {
   type              = "ingress"
 }
 
+# load balancer
 resource "aws_lb" "main" {
   name = "ecs-cluster-ingress"
-  //name             = format("%s-ingress", var.project_name) alterado devido a limitação tamanho do nome do projeto
+  # name             = format("%s-ingress", var.project_name) alterado devido a limitação tamanho do nome do projeto
   internal           = var.load_balancer_internal
   load_balancer_type = var.load_balancer_type
 
@@ -43,6 +45,7 @@ resource "aws_lb" "main" {
 
 }
 
+# Listener que define como o load balancer deve lidar com o tráfego de entrada.
 resource "aws_lb_listener" "main" {
   load_balancer_arn = aws_lb.main.arn
   port              = "80"

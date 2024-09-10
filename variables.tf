@@ -4,6 +4,7 @@ variable "project_name" {}
 
 variable "ssm_vpc_id" {}
 
+#--------- SSM ---------#
 variable "ssm_pub_subnet_1" {}
 
 variable "ssm_pub_subnet_2" {}
@@ -16,13 +17,13 @@ variable "ssm_priv_subnet_2" {}
 
 variable "ssm_priv_subnet_3" {}
 
-#-----------------------------#
+#---------Load Balancer ---------#
 
 variable "load_balancer_internal" {}
 
 variable "load_balancer_type" {}
 
-#---------ECS----------#
+#--------- ECS ----------#
 variable "nodes_ami" {}
 
 variable "node_instance_type" {}
@@ -31,6 +32,7 @@ variable "node_volume_size" {}
 
 variable "node_volume_type" {}
 
+#--------- ECS Capacity ---------#
 variable "cluster_on_demand_min_size" {}
 
 variable "cluster_on_demand_max_size" {}

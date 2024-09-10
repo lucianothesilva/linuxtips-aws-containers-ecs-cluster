@@ -1,4 +1,6 @@
-Aula do day 2 do curso de arquitetura de containers na AWS. Criação de um cluster ECS.
+Aula do day 2 do curso de arquitetura de containers na AWS. 
+
+Implementação de um cluster ECS (Elastic Container Service) com suporte a Auto Scaling e Load Balancing. A infraestrutura é projetada para ser altamente escalável e resiliente, suportando tanto instâncias EC2 On-Demand quanto Spot, otimizando o custo e garantindo disponibilidade.
 
 
 ## Requirements
