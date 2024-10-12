@@ -2,15 +2,14 @@ resource "aws_autoscaling_group" "spots" {
   name_prefix = format("%s-on-demand", var.project_name)
 
   vpc_zone_identifier = [
-    data.aws_ssm_parameter.priv_subnet_1a.value,
-    data.aws_ssm_parameter.priv_subnet_1b.value,
-    data.aws_ssm_parameter.priv_subnet_1c.value,
-
+    data.aws_ssm_parameter.private_subnet_1a.value,
+    data.aws_ssm_parameter.private_subnet_1b.value,
+    data.aws_ssm_parameter.private_subnet_1c.value,
   ]
-
+  
   desired_capacity = var.cluster_on_demand_desired_size
-  min_size         = var.cluster_on_demand_min_size
   max_size         = var.cluster_on_demand_max_size
+  min_size         = var.cluster_on_demand_min_size
 
   launch_template {
     id      = aws_launch_template.spots.id
@@ -19,20 +18,26 @@ resource "aws_autoscaling_group" "spots" {
 
   tag {
     key                 = "Name"
-    value               = format("%s-on-demand", var.project_name)
+    value               = format("%s-spots", var.project_name)
     propagate_at_launch = true
   }
 
-
   tag {
-    key                 = "AmazonESCManaged"
+    key                 = "AmazonECSManaged"
     value               = true
     propagate_at_launch = true
   }
+
+  lifecycle {
+    ignore_changes = [
+      desired_capacity
+    ]
+  }
+
 }
 
 resource "aws_ecs_capacity_provider" "spots" {
-  name = format("%s-on-demand", var.project_name)
+  name = format("%s-spots", var.project_name)
 
   auto_scaling_group_provider {
     auto_scaling_group_arn = aws_autoscaling_group.spots.arn
@@ -42,7 +47,5 @@ resource "aws_ecs_capacity_provider" "spots" {
       status                    = "ENABLED"
       target_capacity           = 90
     }
-
   }
-
 }

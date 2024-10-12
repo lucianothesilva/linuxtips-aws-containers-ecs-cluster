@@ -11,11 +11,11 @@ variable "ssm_pub_subnet_2" {}
 
 variable "ssm_pub_subnet_3" {}
 
-variable "ssm_priv_subnet_1" {}
+variable "ssm_private_subnet_1" {}
 
-variable "ssm_priv_subnet_2" {}
+variable "ssm_private_subnet_2" {}
 
-variable "ssm_priv_subnet_3" {}
+variable "ssm_private_subnet_3" {}
 
 #---------Load Balancer ---------#
 
@@ -38,3 +38,9 @@ variable "cluster_on_demand_min_size" {}
 variable "cluster_on_demand_max_size" {}
 
 variable "cluster_on_demand_desired_size" {}
+
+variable "cluster_spot_min_size" {}
+
+variable "cluster_spot_max_size" {}
+
+variable "cluster_spot_desired_size" {}

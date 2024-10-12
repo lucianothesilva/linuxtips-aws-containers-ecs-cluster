@@ -45,9 +45,9 @@ No modules.
 | [aws_security_group_rule.subnet_ranges](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule) | resource |
 | [aws_ssm_parameter.lb_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
 | [aws_ssm_parameter.lb_listener](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
-| [aws_ssm_parameter.priv_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.priv_subnet_1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.priv_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.private_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.private_subnet_1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.private_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.pub_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.pub_subnet_1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.pub_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
@@ -68,9 +68,9 @@ No modules.
 | <a name="input_nodes_ami"></a> [nodes\_ami](#input\_nodes\_ami) | ---------ECS----------# | `any` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | n/a | `any` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `any` | n/a | yes |
-| <a name="input_ssm_priv_subnet_1"></a> [ssm\_priv\_subnet\_1](#input\_ssm\_priv\_subnet\_1) | n/a | `any` | n/a | yes |
-| <a name="input_ssm_priv_subnet_2"></a> [ssm\_priv\_subnet\_2](#input\_ssm\_priv\_subnet\_2) | n/a | `any` | n/a | yes |
-| <a name="input_ssm_priv_subnet_3"></a> [ssm\_priv\_subnet\_3](#input\_ssm\_priv\_subnet\_3) | n/a | `any` | n/a | yes |
+| <a name="input_ssm_private_subnet_1"></a> [ssm\_priv\_subnet\_1](#input\_ssm\_priv\_subnet\_1) | n/a | `any` | n/a | yes |
+| <a name="input_ssm_private_subnet_2"></a> [ssm\_priv\_subnet\_2](#input\_ssm\_priv\_subnet\_2) | n/a | `any` | n/a | yes |
+| <a name="input_ssm_private_subnet_3"></a> [ssm\_priv\_subnet\_3](#input\_ssm\_priv\_subnet\_3) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_pub_subnet_1"></a> [ssm\_pub\_subnet\_1](#input\_ssm\_pub\_subnet\_1) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_pub_subnet_2"></a> [ssm\_pub\_subnet\_2](#input\_ssm\_pub\_subnet\_2) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_pub_subnet_3"></a> [ssm\_pub\_subnet\_3](#input\_ssm\_pub\_subnet\_3) | n/a | `any` | n/a | yes |

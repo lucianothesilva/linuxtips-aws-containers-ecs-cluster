@@ -4,9 +4,9 @@ resource "aws_autoscaling_group" "on_demand" {
 
   # Define as private subnets onde as instâncias EC2 serão lançadas.
   vpc_zone_identifier = [
-    data.aws_ssm_parameter.priv_subnet_1a.value,
-    data.aws_ssm_parameter.priv_subnet_1b.value,
-    data.aws_ssm_parameter.priv_subnet_1c.value,
+    data.aws_ssm_parameter.private_subnet_1a.value,
+    data.aws_ssm_parameter.private_subnet_1b.value,
+    data.aws_ssm_parameter.private_subnet_1c.value,
 
   ]
 
@@ -26,12 +26,18 @@ resource "aws_autoscaling_group" "on_demand" {
     propagate_at_launch = true
   }
 
-
   tag {
-    key                 = "AmazonESCManaged"
+    key                 = "AmazonECSManaged"
     value               = true
     propagate_at_launch = true
   }
+
+  lifecycle {
+    ignore_changes = [
+      desired_capacity
+    ]
+  }
+
 }
 
 # Capacity Provider associado ao ASG configurado la em cima.
@@ -46,7 +52,5 @@ resource "aws_ecs_capacity_provider" "on_demand" {
       status                    = "ENABLED"
       target_capacity           = 90
     }
-
   }
-
 }
