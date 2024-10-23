@@ -48,9 +48,9 @@ No modules.
 | [aws_ssm_parameter.private_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.private_subnet_1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.private_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.pub_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.pub_subnet_1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.pub_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.public_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.public_subnet_1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.public_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 
 ## Inputs
@@ -71,9 +71,9 @@ No modules.
 | <a name="input_ssm_private_subnet_1"></a> [ssm\_priv\_subnet\_1](#input\_ssm\_priv\_subnet\_1) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_private_subnet_2"></a> [ssm\_priv\_subnet\_2](#input\_ssm\_priv\_subnet\_2) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_private_subnet_3"></a> [ssm\_priv\_subnet\_3](#input\_ssm\_priv\_subnet\_3) | n/a | `any` | n/a | yes |
-| <a name="input_ssm_pub_subnet_1"></a> [ssm\_pub\_subnet\_1](#input\_ssm\_pub\_subnet\_1) | n/a | `any` | n/a | yes |
-| <a name="input_ssm_pub_subnet_2"></a> [ssm\_pub\_subnet\_2](#input\_ssm\_pub\_subnet\_2) | n/a | `any` | n/a | yes |
-| <a name="input_ssm_pub_subnet_3"></a> [ssm\_pub\_subnet\_3](#input\_ssm\_pub\_subnet\_3) | n/a | `any` | n/a | yes |
+| <a name="input_ssm_public_subnet_1"></a> [ssm\_pub\_subnet\_1](#input\_ssm\_pub\_subnet\_1) | n/a | `any` | n/a | yes |
+| <a name="input_ssm_public_subnet_2"></a> [ssm\_pub\_subnet\_2](#input\_ssm\_pub\_subnet\_2) | n/a | `any` | n/a | yes |
+| <a name="input_ssm_public_subnet_3"></a> [ssm\_pub\_subnet\_3](#input\_ssm\_pub\_subnet\_3) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_vpc_id"></a> [ssm\_vpc\_id](#input\_ssm\_vpc\_id) | n/a | `any` | n/a | yes |
 
 ## Outputs

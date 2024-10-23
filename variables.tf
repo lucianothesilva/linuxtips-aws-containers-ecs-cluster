@@ -5,11 +5,11 @@ variable "project_name" {}
 variable "ssm_vpc_id" {}
 
 #--------- SSM ---------#
-variable "ssm_pub_subnet_1" {}
+variable "ssm_public_subnet_1" {}
 
-variable "ssm_pub_subnet_2" {}
+variable "ssm_public_subnet_2" {}
 
-variable "ssm_pub_subnet_3" {}
+variable "ssm_public_subnet_3" {}
 
 variable "ssm_private_subnet_1" {}
 
