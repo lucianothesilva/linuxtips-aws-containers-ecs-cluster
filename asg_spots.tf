@@ -6,7 +6,7 @@ resource "aws_autoscaling_group" "spots" {
     data.aws_ssm_parameter.private_subnet_1b.value,
     data.aws_ssm_parameter.private_subnet_1c.value,
   ]
-  
+
   desired_capacity = var.cluster_on_demand_desired_size
   max_size         = var.cluster_on_demand_max_size
   min_size         = var.cluster_on_demand_min_size
