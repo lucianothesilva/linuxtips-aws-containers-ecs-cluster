@@ -13,3 +13,7 @@ output "lb_ssm_arn" {
 output "lb_ssm_listener" {
   value = aws_ssm_parameter.lb_listener.id
 }
+
+output "cloudmap_ssm" {
+  value = aws_ssm_parameter.cloudmap.id
+}
